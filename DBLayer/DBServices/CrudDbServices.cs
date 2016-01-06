@@ -11,6 +11,7 @@ namespace DBLayer.DBServices
     public class CrudDbServices //: BaseDbService<>
     {
         private readonly ISessionFactory _sessionFactory;
+
         public CrudDbServices(ISessionFactory sessionFactory)
         {
             _sessionFactory = sessionFactory;
@@ -20,16 +21,13 @@ namespace DBLayer.DBServices
         {
             using (ISession session = _sessionFactory.OpenSession())
             {
-                using (ITransaction transaction = session.BeginTransaction())
+                try
                 {
-                    try
-                    {
-                        return session.QueryOver<Employee>().Where(t => t.Id == recordId).List().FirstOrDefault();
-                    }
-                    catch (Exception ex)
-                    {
-                        throw ex;
-                    }
+                    return session.QueryOver<Employee>().Where(t => t.Id == recordId).List().FirstOrDefault();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
                 }
             }
         }
@@ -43,10 +41,12 @@ namespace DBLayer.DBServices
                     try
                     {
                         session.Delete(record);
+                        transaction.Commit();
                         return true;
                     }
                     catch (Exception ex)
                     {
+                        transaction.Rollback();
                         throw ex;
                     }
                 }
@@ -55,34 +55,75 @@ namespace DBLayer.DBServices
 
         public List<Employee> GetAllEmployees()
         {
+            using (var session = _sessionFactory.OpenSession())
+            {
+                try
+                {
+                    return session.QueryOver<Employee>().List().ToList();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+        }
+
+        public void Save(Employee employee)
+        {
             using (ISession session = _sessionFactory.OpenSession())
             {
                 using (ITransaction transaction = session.BeginTransaction())
                 {
                     try
                     {
-
-                        return session.QueryOver<Employee>().List().ToList();
-                        //IQuery query = session.CreateQuery("FROM Customers WHERE customer_id = " + customer_id);
-
-                        //Customers customer = query.List<Customers>()[0];
-
-                        //txtCustomerId.Text = customer.customer_id.ToString();
-                        //txtName.Text = customer.name;
-                        //txtEmail.Text = customer.email;
-                        //txtContactPerson.Text = customer.contact_person;
-                        //txtContactNumber.Text = customer.contact_number;
-                        //txtPostalAddress.Text = customer.postal_address;
-                        //txtPhysicalAddress.Text = customer.physical_address;
+                        session.Save(employee);
+                        transaction.Commit();
                     }
                     catch (Exception ex)
                     {
+                        transaction.Rollback();
                         throw ex;
-                        //MessageBox.Show(ex.Message, "Exception Msg");
                     }
                 }
             }
-            return null;
-        } 
+        }
+        public void Update(Employee employee)
+        {
+            using (ISession session = _sessionFactory.OpenSession())
+            {
+                using (ITransaction transaction = session.BeginTransaction())
+                {
+                    try
+                    {
+                        session.Update(employee);
+                        transaction.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        throw ex;
+                    }
+                }
+            }
+        }
+        public void SaveOrUpdate(Employee employee)
+        {
+            using (ISession session = _sessionFactory.OpenSession())
+            {
+                using (ITransaction transaction = session.BeginTransaction())
+                {
+                    try
+                    {
+                        session.SaveOrUpdate(employee);
+                        transaction.Commit();
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        throw ex;
+                    }
+                }
+            }
+        }
     }
 }

@@ -25,30 +25,42 @@ namespace UnitTestProject1
         [TestMethod]
         public void EmployeeInsert()
         {
-
-            Employee e1 = new Employee();
-            
-            e1.FirstName = "Tom";
-            e1.LastName = "Cruse-" + Guid.NewGuid().ToString();
-
-            using (var session = sessionFactory.OpenSession())
+            try
             {
-                using (ITransaction transaction = session.BeginTransaction())
-                {
-                    try
-                    {
-                        session.Save(e1);
-                        transaction.Commit();
-                    }
+                Employee e1 = new Employee();
 
-                    catch (Exception ex)
-                    {
-                        transaction.Rollback();
-                        Assert.Fail("Exception : "+ ex.Message);
-                    }
-                }
+                e1.FirstName = "Tom";
+                e1.LastName = "Hanks-" + Guid.NewGuid().ToString();
+
+                crudDbServices.SaveOrUpdate(e1);
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail("Exception : " + ex.Message);
             }
         }
+
+        [TestMethod]
+        public void EmployeeUpdate()
+        {
+            string guid2Search = "383807be-b3e2-49b5-bd72-a584016f4878";
+            Employee e1 = new Employee();
+            e1.Id = new Guid(guid2Search);
+            e1.FirstName = "Tom";
+            e1.LastName = "Cruse-" + Guid.NewGuid().ToString();
+            crudDbServices.SaveOrUpdate(e1);
+
+            var employee = crudDbServices.FindEmployeeById(new Guid(guid2Search));
+            if (employee != null)
+            {
+                Assert.IsTrue(employee.LastName.Equals(e1.LastName, StringComparison.InvariantCultureIgnoreCase));
+            }
+            else
+            {
+                Assert.Fail("No data in table error");
+            }
+        }
+
         [TestMethod]
         public void FindEmployeeById()
         {
