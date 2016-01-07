@@ -17,7 +17,7 @@ namespace SeleniumTestConsole
             {
                 IWebDriver driver = new FirefoxDriver();
                 //IWebDriver driver = new ChromeDriver();
-                driver.Navigate();//.GoToUrl("http://www.gmail.com");
+                driver.Navigate();
                 driver.Manage().Window.Maximize();
 
                 ILogin g = new GmailLogin(driver);
