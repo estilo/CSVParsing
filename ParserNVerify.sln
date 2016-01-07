@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBLayer_UnitTest", "DBLayer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RESTApp", "RESTApp\RESTApp.csproj", "{D5BE2A31-F665-4258-AC10-F76D90B4B52E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumTestConsole", "SeleniumTestConsole\SeleniumTestConsole.csproj", "{E9310DE8-528B-49B0-B663-F0D70C6FE3F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{D5BE2A31-F665-4258-AC10-F76D90B4B52E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5BE2A31-F665-4258-AC10-F76D90B4B52E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5BE2A31-F665-4258-AC10-F76D90B4B52E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9310DE8-528B-49B0-B663-F0D70C6FE3F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9310DE8-528B-49B0-B663-F0D70C6FE3F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9310DE8-528B-49B0-B663-F0D70C6FE3F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9310DE8-528B-49B0-B663-F0D70C6FE3F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
