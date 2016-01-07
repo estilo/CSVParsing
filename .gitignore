@@ -211,3 +211,4 @@ obj/
 [Tt]est[Rr]esult*
 Dependencies/*
 *.datasource
+RESTApp/Properties/PublishProfiles/SMARTERASP.NET.pubxml
