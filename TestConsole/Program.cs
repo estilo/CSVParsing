@@ -10,7 +10,8 @@ namespace TestConsole
     {
         private static void Main(string[] args)
         {
-            
+            displayList<ProductInfo>(new ProductInfoParser().Parse("inFlow_ProductDetails  Freelancer.csv"));
+
             displayList<PostalAddress>(new AddressParser().Parse("Address.csv"));
             displayList<Person>(new PersonParser().Parse("names.csv"));
             displayList<string>(new SingleColumnParser().Parse("usernames.txt"));

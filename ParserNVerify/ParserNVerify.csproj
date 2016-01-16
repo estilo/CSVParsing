@@ -47,9 +47,11 @@
     <Compile Include="Models\ClassMap\PersonDetailMap.cs" />
     <Compile Include="Models\ClassMap\PersonMap.cs" />
     <Compile Include="Models\ClassMap\PostalAddressMap.cs" />
+    <Compile Include="Models\ClassMap\ProductInfoMap.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\PersonDetail.cs" />
     <Compile Include="Models\PostalAddress.cs" />
+    <Compile Include="Models\ProductInfo.cs" />
     <Compile Include="Parsing\Concretes\AddressParser.cs" />
     <Compile Include="Parsing\Concretes\PersonDetailWriter.cs" />
     <Compile Include="Parsing\Concretes\PersonParser.cs" />
@@ -59,6 +61,7 @@
     <Compile Include="Parsing\Interfaces\IParser.cs" />
     <Compile Include="Parsing\Interfaces\IPersonDetailWriter.cs" />
     <Compile Include="Parsing\Interfaces\IPersonParser.cs" />
+    <Compile Include="Parsing\Interfaces\IProductInfoParser.cs" />
     <Compile Include="Parsing\Interfaces\ISingleColumnParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
