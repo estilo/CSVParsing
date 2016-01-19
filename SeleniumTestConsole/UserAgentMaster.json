@@ -1,0 +1,33 @@
+﻿[{
+	"browser": "Chrome",
+	"version": 19,
+	"ua": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.56 Safari/536.5"
+}, {
+	"browser": "FireFox",
+	"version": 13,
+	"ua": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:13.0) Gecko/20100101 Firefox/13.0.1"
+}, {
+	"browser": "Safari",
+	"version": 5.1,
+	"ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_4) AppleWebKit/534.57.2 (KHTML, like Gecko) Version/5.1.7 Safari/534.57.2"
+}, {
+	"browser": "Opera",
+	"version": 11,
+	"ua": "Opera/9.80 (Windows NT 5.1; U; en) Presto/2.10.229 Version/11.60"
+}, {
+	"browser": "IE",
+	"version": 9,
+	"ua": "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)"
+}, {
+	"browser": "IE",
+	"version": 8,
+	"ua": "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; en-GB)"
+}, {
+	"browser": "IE",
+	"version": 7,
+	"ua": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)"
+}, {
+	"browser": "IE",
+	"version": 6,
+	"ua": "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)"
+}]
