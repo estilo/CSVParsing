@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RESTApp", "RESTApp\RESTApp.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumTestConsole", "SeleniumTestConsole\SeleniumTestConsole.csproj", "{E9310DE8-528B-49B0-B663-F0D70C6FE3F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDFMaker", "PDFMaker\PDFMaker.csproj", "{130E624C-C330-4CE0-B8DF-2816BA73A002}"
+EndProject
+Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "GoldenRuralWebsite", "GoldenRuralWebsite\GoldenRuralWebsite.phpproj", "{12A2060B-92C3-4A31-8978-B62BA899E22B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{E9310DE8-528B-49B0-B663-F0D70C6FE3F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9310DE8-528B-49B0-B663-F0D70C6FE3F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9310DE8-528B-49B0-B663-F0D70C6FE3F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{130E624C-C330-4CE0-B8DF-2816BA73A002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{130E624C-C330-4CE0-B8DF-2816BA73A002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{130E624C-C330-4CE0-B8DF-2816BA73A002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{130E624C-C330-4CE0-B8DF-2816BA73A002}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12A2060B-92C3-4A31-8978-B62BA899E22B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12A2060B-92C3-4A31-8978-B62BA899E22B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12A2060B-92C3-4A31-8978-B62BA899E22B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12A2060B-92C3-4A31-8978-B62BA899E22B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

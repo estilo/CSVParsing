@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1A22FDA8-5332-4F9F-922C-516239B99FB0}</ProjectGuid>
+    <ProjectGuid>{130E624C-C330-4CE0-B8DF-2816BA73A002}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ParserNVerify</RootNamespace>
-    <AssemblyName>ParserNVerify</AssemblyName>
+    <RootNamespace>PDFMaker</RootNamespace>
+    <AssemblyName>PDFMaker</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,8 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CsvHelper, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
-      <HintPath>..\packages\CsvHelper.2.13.5.0\lib\net40-client\CsvHelper.dll</HintPath>
+    <Reference Include="itextsharp, Version=5.5.8.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.8\lib\itextsharp.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -44,27 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\ClassMap\GoldenRuralContactMap.cs" />
-    <Compile Include="Models\ClassMap\PersonDetailMap.cs" />
-    <Compile Include="Models\ClassMap\PersonMap.cs" />
-    <Compile Include="Models\ClassMap\PostalAddressMap.cs" />
-    <Compile Include="Models\ClassMap\ProductInfoMap.cs" />
-    <Compile Include="Models\GoldenRuralContact.cs" />
-    <Compile Include="Models\Person.cs" />
-    <Compile Include="Models\PersonDetail.cs" />
-    <Compile Include="Models\PostalAddress.cs" />
-    <Compile Include="Models\ProductInfo.cs" />
-    <Compile Include="Parsing\Concretes\AddressParser.cs" />
-    <Compile Include="Parsing\Concretes\PersonDetailWriter.cs" />
-    <Compile Include="Parsing\Concretes\PersonParser.cs" />
-    <Compile Include="Parsing\Concretes\SingleColumnParser.cs" />
-    <Compile Include="Parsing\Interfaces\IAddressParser.cs" />
-    <Compile Include="Parsing\Interfaces\ICSVWriter.cs" />
-    <Compile Include="Parsing\Interfaces\IParser.cs" />
-    <Compile Include="Parsing\Interfaces\IPersonDetailWriter.cs" />
-    <Compile Include="Parsing\Interfaces\IPersonParser.cs" />
-    <Compile Include="Parsing\Interfaces\IProductInfoParser.cs" />
-    <Compile Include="Parsing\Interfaces\ISingleColumnParser.cs" />
+    <Compile Include="PDFMaker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
